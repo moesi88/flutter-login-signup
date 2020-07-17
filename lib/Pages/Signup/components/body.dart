@@ -1,41 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_sign_up/Pages/Signup/components/background.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../../components/already_have_an_account_acheck.dart';
+import '../../../components/rounded_button.dart';
+import '../../../components/rounded_input_field.dart';
+import '../../../components/rounded_password_field.dart';
+import '../../Login/login_page.dart';
 
 class Body extends StatelessWidget {
-  final Widget child;
-
-  const Body({
-    Key key,
-    @required this.child,
-  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height,
-      width: double.infinity,
-      // here i can use size.width but i used double.infinity becuase they both same as far as i know
-      child: Stack(
-        alignment: Alignment.center,
-        children: <Widget>[
-          Positioned(
-            top: 0,
-            left: 0,
-            child: Image.asset(
-              "assets/images/signup_top.png",
-              width: size.width * .35,
-            ),
-          ),
-          Positioned(
-            bottom: 0,
-            left: 0,
-            child: Image.asset(
-              "assets/images/main_bottom.png",
-              width: size.width * .25,
-            ),
-          ),
-          child,
-        ],
-      ),
-    );
+    return Background(
+        child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          "SIGN UP",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        SvgPicture.asset(
+          "assets/icons/signup.svg",
+          height: size.height * .35,
+        ),
+        RoundedInputField(
+          hintText: "Your E-mail",
+          onChanged: (value) {},
+        ),
+        RoundedPasswordField(
+          onChanged: (value) {},
+        ),
+        RoundedButton(
+          text: "SIGN UP",
+          press: () {},
+        ),
+        AlreadyHaveAnAccountCheck(
+          login: false,
+          press: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return LoginPage();
+                },
+              ),
+            );
+          },
+        ),
+      ],
+    ));
   }
 }
