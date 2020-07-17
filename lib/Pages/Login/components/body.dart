@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_login_sign_up/Pages/Login/components/background.dart';
+import 'package:flutter_login_sign_up/Pages/Signup/signup_page.dart';
 import 'package:flutter_login_sign_up/components/already_have_an_account_acheck.dart';
 import 'package:flutter_login_sign_up/components/rounded_button.dart';
 import 'package:flutter_login_sign_up/components/rounded_input_field.dart';
 import 'package:flutter_login_sign_up/components/rounded_password_field.dart';
-import 'package:flutter_login_sign_up/components/text_field_container.dart';
-import 'package:flutter_login_sign_up/constants.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
@@ -49,7 +48,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      // return SignUpScreen();
+                      return SignupPage();
                     },
                   ),
                 );
