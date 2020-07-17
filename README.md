@@ -1,6 +1,12 @@
 # flutter_login_sign_up
 
-A new Flutter project.
+In this project and practiced how to build basic login/sign up page with flutter
+taking into account the best practices for naming conventions and structure guidelines
+that been provided by Flutter docs and community,
+
+the project have welcome page that has 2 buttons that redirect user to:
+1- login page
+2- signup page
 
 ## Getting Started
 
