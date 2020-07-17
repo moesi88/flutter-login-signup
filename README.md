@@ -4,9 +4,9 @@ In this project and practiced how to build basic login/sign up page with flutter
 taking into account the best practices for naming conventions and structure guidelines
 that been provided by Flutter docs and community,
 
-the project have welcome page that has 2 buttons that redirect user to:
-1- login page
-2- signup page
+the project have welcome page that has 2 buttons that redirect user to:</br>
+1- login page</br>
+2- signup page</br>
 
 ## Getting Started
 
